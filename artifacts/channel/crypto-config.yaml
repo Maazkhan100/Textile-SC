@@ -1,0 +1,98 @@
+
+OrdererOrgs:
+  - Name: Orderer
+    Domain: example.com
+    EnableNodeOUs: true
+
+    Specs:
+      - Hostname: orderer
+        SANS:
+            - "localhost"
+            - "127.0.0.1"
+      - Hostname: orderer2
+        SANS:
+          - "localhost"
+          - "127.0.0.1"
+      - Hostname: orderer3
+        SANS:
+            - "localhost"
+            - "127.0.0.1"
+
+PeerOrgs:
+  - Name: Org1
+    Domain: fiber
+    EnableNodeOUs: true
+
+    Template:
+      Count: 2
+      SANS:
+        - "localhost"
+
+    Users:
+      Count: 1
+      OU: [ADMIN]
+
+  - Name: Org2
+    Domain: yarn
+    EnableNodeOUs: true
+
+    Template:
+      Count: 2
+      SANS:
+        - "localhost"
+
+    Users:
+      Count: 1
+      OU: [ADMIN]
+
+  - Name: Org3
+    Domain: fabric
+    EnableNodeOUs: true
+
+    Template:
+      Count: 2
+      SANS:
+        - "localhost"
+
+    Users:
+      Count: 1
+      OU: [ADMIN]
+
+  - Name: Org4
+    Domain: apparel
+    EnableNodeOUs: true
+
+    Template:
+      Count: 2
+      SANS:
+        - "localhost"
+
+    Users:
+      Count: 1
+      OU: [ADMIN]
+
+  - Name: Org5
+    Domain: retailer
+    EnableNodeOUs: true
+
+    Template:
+      Count: 2
+      SANS:
+        - "localhost"
+
+    Users:
+      Count: 1
+      OU: [ADMIN]
+
+  # - Name: Org6
+    # Domain: retailor
+    # EnableNodeOUs: true
+
+    # Template:
+    #   Count: 2
+    #   SANS:
+    #     - "localhost"
+
+    # Users:
+    #   Count: 1
+    #   OU: [ADMIN]    
